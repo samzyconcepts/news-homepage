@@ -140,8 +140,8 @@ header aside div p {
 	line-height: 1.5;
 }
 
-section {
-	margin-top: 50px !important;
+section.container {
+	margin: 50px auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 30px;
@@ -176,18 +176,16 @@ section .card p {
 }
 
 @media (max-width: 600px) {
-  .fixed-position{
-    overflow: hidden;
-    position: fixed;
-  }
+	.fixed-position {
+		overflow: hidden;
+		position: fixed;
+	}
 	.container {
 		max-width: 90%;
 	}
 
 	nav {
 		grid-template-columns: 100px auto;
-		position: relative;
-		isolation: isolate;
 	}
 
 	.menu {
@@ -211,10 +209,9 @@ section .card p {
 		inset: 0;
 		left: 0;
 		background-color: hsla(240, 100%, 5%, 0.75);
-
 		backdrop-filter: blur(5px);
 		transform: translateZ(-1px);
-    transition: 0.3s;
+		transition: 0.3s;
 	}
 
 	.mobile-menu.active ~ .menu {
@@ -259,8 +256,15 @@ section .card p {
 		height: 400px;
 		object-fit: cover;
 	}
+	header .content button {
+		margin-top: 2rem;
+	}
 
-	section {
+	section.container {
 		grid-template-columns: 1fr;
+	}
+	section .card h3{
+		font-size: 1rem;
+		line-height: 2;
 	}
 }
